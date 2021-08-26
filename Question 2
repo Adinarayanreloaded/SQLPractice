@@ -1,0 +1,34 @@
+Create department table with the following structure.
+Name Type
+Deptno Number
+Deptname Varchar2(10)
+location Varchar2(10)
+
+CREATE TABLE department
+(
+deptno NUMBER,
+deptname VARCHAR2(10),
+location VARCHAR2(10)
+);
+ALTER TABLE department
+ADD designation VARCHAR2(10);
+INSERT INTO department
+VALUES(1,'electrical','chandigarh','student');
+INSERT INTO department
+VALUES(3,'cse','patiala','student');
+INSERT INTO department
+VALUES(4,'ca','delhi','student');
+INSERT INTO department
+VALUES(9,'mba','mumbai','student');
+INSERT INTO department
+VALUES(7,'civil','hydrabad','student');
+SELECT *
+FROM department;
+SELECT deptno
+FROM department
+GROUP BY deptno;
+UPDATE department
+SET location = 'chennai'
+WHERE deptno = 9;
+DELETE FROM department
+WHERE deptno = 7;
